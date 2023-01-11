@@ -32,7 +32,7 @@ if ( isset($_POST["submit"]) ) {
                 <div class="col-12 col-lg-6">
                     <div class="form-group text-danger">
                         <label for="nomor_registrasi_kendaraan" class="text-dark">No. Registrasi Kendaraan</label>
-                        <input class="form-control" type="text" name="nomor_registrasi_kendaraan" id="nomor_registrasi_kendaraan" placeholder="Mis. B-1234-XYZ" required>
+                        <input class="form-control" type="text" name="nomor_registrasi_kendaraan" id="nomor_registrasi_kendaraan" placeholder="Mis. B-1234-XYZ" pattern="^[A-Z]{1,2}\s{1}\d{0,4}\s{0,1}[A-Z]{0,3}$" required>
                     </div>
                     <div class="form-group text-danger">
                         <label for="nama_pemilik" class="text-dark">Nama Pemilik</label>
@@ -80,6 +80,12 @@ if ( isset($_POST["submit"]) ) {
     <script>
         $("#tambah_data_kendaraan").validate();
         // $(".year").mask("0000")
+        // $("#nomor_registrasi_kendaraan").rules("add", { pattern: "^[A-Z]{1,2}\s{1}\d{0,4}\s{0,1}[A-Z]{0,3}$" })
+        // $("#nomor_registrasi_kendaraan").validate({
+        //     onfocusout: function(element) {
+        //         this.element(element)
+        //     }
+        // })
     </script>
 
     

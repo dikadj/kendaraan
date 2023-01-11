@@ -41,7 +41,7 @@ if ( isset($_POST["submit"]) ) {
                         <label for="nomor_registrasi_kendaraan" class="text-dark">No. Registrasi Kendaraan</label>
                         <input class="form-control" type="text" placeholder="Mis. B-1234-XYZ" id="nomor_registrasi_kendaraan" value="<?= $item['nomor_registrasi_kendaraan'] ?>" disabled>
                         <!-- Cannot be edited -->
-                        <input type="hidden" name="nomor_registrasi_kendaraan" value="<?= $item['nomor_registrasi_kendaraan'] ?>" required>
+                        <input type="hidden" name="nomor_registrasi_kendaraan" value="<?= $item['nomor_registrasi_kendaraan'] ?>" pattern="^[A-Z]{1,2}\s{1}\d{0,4}\s{0,1}[A-Z]{0,3}$" required>
                     </div>
                     <div class="form-group text-danger">
                         <label for="nama_pemilik" class="text-dark">Nama Pemilik</label>
