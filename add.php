@@ -30,34 +30,34 @@ if ( isset($_POST["submit"]) ) {
         <form action="" method="post" class="mb-5" id="tambah_data_kendaraan">
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <div class="form-group">
-                        <label for="nomor_registrasi_kendaraan">No. Registrasi Kendaraan</label>
+                    <div class="form-group text-danger">
+                        <label for="nomor_registrasi_kendaraan" class="text-dark">No. Registrasi Kendaraan</label>
                         <input class="form-control" type="text" name="nomor_registrasi_kendaraan" id="nomor_registrasi_kendaraan" placeholder="Mis. B-1234-XYZ" required>
                     </div>
-                    <div class="form-group">
-                        <label for="nama_pemilik">Nama Pemilik</label>
+                    <div class="form-group text-danger">
+                        <label for="nama_pemilik" class="text-dark">Nama Pemilik</label>
                         <input class="form-control" placeholder="Mis. Budi Susanto" type="text" name="nama_pemilik" id="nama_pemilik" required>
                     </div>
-                    <div class="form-group">
-                        <label for="merk_kendaraan">Merk Kendaraan</label>
+                    <div class="form-group text-danger">
+                        <label for="merk_kendaraan" class="text-dark">Merk Kendaraan</label>
                         <input class="form-control" placeholder="Mis. Honda Vario" type="text" name="merk_kendaraan" id="merk_kendaraan" required>
                     </div>
-                    <div class="form-group">
-                        <label for="alamat">Alamat Pemilik Kendaraan</label>
+                    <div class="form-group text-danger">
+                        <label for="alamat" class="text-dark">Alamat Pemilik Kendaraan</label>
                         <textarea class="form-control" placeholder="Mis. Jalan Kaliurang No. 23F, Kayen, Condongcatur, Depok, Sleman" name="alamat" id="alamat" required></textarea>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="form-group">
-                        <label for="tahun_pembuatan">Tahun Pembuatan</label>
-                        <input class="form-control year" placeholder="Mis. 2022" min=4 max=4 type="text" name="tahun_pembuatan" id="tahun_pembuatan" required>
+                    <div class="form-group text-danger">
+                        <label for="tahun_pembuatan" class="text-dark">Tahun Pembuatan</label>
+                        <input class="form-control year" placeholder="Mis. 2022" min=1800 max=<?= (int)date('Y') ?> type="text" name="tahun_pembuatan" id="tahun_pembuatan" required>
                     </div>
-                    <div class="form-group">
-                        <label for="kapasitas_silinder">Kapasitas Silinder</label>
+                    <div class="form-group text-danger">
+                        <label for="kapasitas_silinder" class="text-dark">Kapasitas Silinder</label>
                         <input class="form-control" placeholder="Mis. 125cc ditulis '125' saja" type="text" name="kapasitas_silinder" id="kapasitas_silinder" required>
                     </div>
-                    <div class="form-group">
-                        <label for="warna_kendaraan">Warna Kendaraan</label>
+                    <div class="form-group text-danger">
+                        <label for="warna_kendaraan" class="text-dark">Warna Kendaraan</label>
                         <select class="form-control" name="warna_kendaraan" id="warna_kendaraan">
                             <option>Pilih warna...</option>
                             <option value="Merah">Merah</option>
@@ -66,8 +66,8 @@ if ( isset($_POST["submit"]) ) {
                             <option value="Abu-Abu">Abu-Abu</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="bahan_bakar">Bahan Bakar</label>
+                    <div class="form-group text-danger">
+                        <label for="bahan_bakar" class="text-dark">Bahan Bakar</label>
                         <input class="form-control" placeholder="Mis. Bensin" type="text" name="bahan_bakar" id="bahan_bakar" required>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ if ( isset($_POST["submit"]) ) {
 
     <script>
         $("#tambah_data_kendaraan").validate();
-        $(".year").mask("0000")
+        // $(".year").mask("0000")
     </script>
 
     

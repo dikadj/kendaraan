@@ -106,8 +106,8 @@ function edit($data) {
 function search($keyword) {
     $nopol = $keyword["cari_nopol"];
     $nama = $keyword["cari_nama_pemilik"];
-    // $query = "SELECT * FROM kendaraan WHERE nomor_registrasi_kendaraan LIKE '%$nopol%' AND nama_pemilik LIKE '%$nama%' ORDER BY id ASC";
-    $query = "SELECT * FROM kendaraan WHERE nomor_registrasi_kendaraan = '$nopol' AND nama_pemilik = '$nama' ORDER BY id ASC";
+    $query = "SELECT * FROM kendaraan WHERE nomor_registrasi_kendaraan LIKE '%$nopol%' AND nama_pemilik LIKE '%$nama%' ORDER BY id ASC";
+    // $query = "SELECT * FROM kendaraan WHERE nomor_registrasi_kendaraan = '$nopol' AND nama_pemilik = '$nama' ORDER BY id ASC";
 
     return query($query);
 }

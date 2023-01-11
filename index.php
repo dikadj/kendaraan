@@ -25,14 +25,14 @@ if (isset($_POST["cari"])) {
         <div class="row">
           <div class="col-12" style="background: lavenderblush; border: 1px solid red">
             <div class="row">
-              <div class="col-12 col-lg-4 m-3 text-dark">
+              <div class="col-12 col-lg-4 m-3 text-danger">
                 <div class="form-group">
-                  <label for="cari_nopol">No. Registrasi</label>
-                  <input class="form-control" type="text" placeholder="Mis. B-1234-XYZ" id="cari_nopol" name="cari_nopol" autofocus value="<?= isset($_POST['cari_nopol']) ? $_POST['cari_nopol'] : '' ?>" required>
+                  <label for="cari_nopol" class="text-dark">No. Registrasi</label>
+                  <input class="form-control" type="text" placeholder="Mis. B-1234-XYZ" id="cari_nopol" name="cari_nopol" autofocus value="<?= isset($_POST['cari_nopol']) ? $_POST['cari_nopol'] : '' ?>">
                 </div>
                 <div class="form-group">
-                  <label for="cari_nama_pemilik">Nama Pemilik</label>
-                  <input class="form-control" type="text" placeholder="Mis. Budi Susanto" id="cari_nama_pemilik" name="cari_nama_pemilik" value="<?= isset($_POST['cari_nama_pemilik']) ? $_POST['cari_nama_pemilik'] : '' ?>" required>
+                  <label for="cari_nama_pemilik" class="text-dark">Nama Pemilik</label>
+                  <input class="form-control" type="text" placeholder="Mis. Budi Susanto" id="cari_nama_pemilik" name="cari_nama_pemilik" value="<?= isset($_POST['cari_nama_pemilik']) ? $_POST['cari_nama_pemilik'] : '' ?>">
                 </div>
               </div>
             </div>
